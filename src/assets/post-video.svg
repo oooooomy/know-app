@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/80*80/定位</title>
+    <defs>
+        <linearGradient x1="0%" y1="3.061617e-15%" x2="97.3416481%" y2="97.3416481%" id="linearGradient-1">
+            <stop stop-color="#FFB5DA" offset="0%"></stop>
+            <stop stop-color="#E72F7E" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="80" height="80" rx="32"></rect>
+        <linearGradient x1="64.6955277%" y1="60.8530508%" x2="29.0700597%" y2="23.6339496%" id="linearGradient-4">
+            <stop stop-color="#9F2E69" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#661438" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="1.93506142%" y1="16.6215704%" x2="96.062006%" y2="81.9875042%" id="linearGradient-5">
+            <stop stop-color="#D2BDFF" offset="0%"></stop>
+            <stop stop-color="#5B18E5" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="48" height="40" rx="8"></rect>
+        <path d="M5.5,0 L42.5,0 C45.5375661,-5.57991845e-16 48,2.46243388 48,5.5 L48,9 L48,9 L0,9 L0,5.5 C-3.71994563e-16,2.46243388 2.46243388,5.57991845e-16 5.5,0 Z" id="path-8"></path>
+    </defs>
+    <g id="ICON" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="15" transform="translate(-446.000000, -368.000000)">
+            <g id="编组" transform="translate(446.000000, 368.000000)">
+                <g id="路径-14">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="矩形" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="分组" mask="url(#mask-3)">
+                        <g transform="translate(8.000000, 11.000000)">
+                            <polygon id="星形" stroke="none" fill="#FFFFFF" fill-rule="evenodd" transform="translate(7.949747, 4.949747) rotate(-45.000000) translate(-7.949747, -4.949747) " points="7.94974747 6.35485815 5.47487373 7.4246212 6.54463679 4.94974747 5.47487373 2.47487373 7.94974747 3.54463679 10.4246212 2.47487373 9.35485815 4.94974747 10.4246212 7.4246212"></polygon>
+                            <polygon id="星形-copy" stroke="none" fill="#FFFFFF" fill-rule="evenodd" opacity="0.400000006" transform="translate(55.949747, 11.071068) rotate(-45.000000) translate(-55.949747, -11.071068) " points="55.9497475 12.2754484 53.8284271 13.1923882 54.7453669 11.0710678 53.8284271 8.94974747 55.9497475 9.86668723 58.0710678 8.94974747 57.154128 11.0710678 58.0710678 13.1923882"></polygon>
+                            <circle id="椭圆形" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.400000006" cx="1.5" cy="46.5" r="1.5"></circle>
+                        </g>
+                    </g>
+                    <polygon fill="url(#linearGradient-4)" opacity="0.200000003" mask="url(#mask-3)" points="61.0420414 22.2904163 101.249723 63.8085704 66.532567 103.839868 19 56.2842671"></polygon>
+                </g>
+                <g id="分组-2" transform="translate(16.000000, 20.000000)">
+                    <g id="矩形-+-矩形-copy-+-矩形-copy-2-+-矩形-copy-3-+-矩形-copy-4-Mask">
+                        <mask id="mask-7" fill="white">
+                            <use xlink:href="#path-6"></use>
+                        </mask>
+                        <use id="Mask" fill="url(#linearGradient-5)" transform="translate(24.000000, 20.000000) rotate(-360.000000) translate(-24.000000, -20.000000) " xlink:href="#path-6"></use>
+                        <g mask="url(#mask-7)">
+                            <mask id="mask-9" fill="white">
+                                <use xlink:href="#path-8"></use>
+                            </mask>
+                            <use id="Mask" fill="#5B18E5" xlink:href="#path-8"></use>
+                            <rect id="矩形" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-9)" transform="translate(5.616025, 5.995191) rotate(-30.000000) translate(-5.616025, -5.995191) " x="4.6160254" y="-1.50480947" width="2" height="15"></rect>
+                            <rect id="矩形-copy" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-9)" transform="translate(14.866025, 5.995191) rotate(-30.000000) translate(-14.866025, -5.995191) " x="13.8660254" y="-1.50480947" width="2" height="15"></rect>
+                            <rect id="矩形-copy-2" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-9)" transform="translate(24.116025, 5.995191) rotate(-30.000000) translate(-24.116025, -5.995191) " x="23.1160254" y="-1.50480947" width="2" height="15"></rect>
+                            <rect id="矩形-copy-3" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-9)" transform="translate(33.366025, 5.995191) rotate(-30.000000) translate(-33.366025, -5.995191) " x="32.3660254" y="-1.50480947" width="2" height="15"></rect>
+                            <rect id="矩形-copy-4" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-9)" transform="translate(42.616025, 5.995191) rotate(-30.000000) translate(-42.616025, -5.995191) " x="41.6160254" y="-1.50480947" width="2" height="15"></rect>
+                        </g>
+                    </g>
+                    <path d="M25.9242278,20.0005086 L30.3380385,26.1364385 C30.6605457,26.5847771 30.5585392,27.2096712 30.1102006,27.5321784 C29.9400797,27.6545529 29.7358125,27.7203895 29.5262496,27.7203895 L20.6986282,27.7203895 C20.1463434,27.7203895 19.6986282,27.2726743 19.6986282,26.7203895 C19.6986282,26.5108266 19.7644648,26.3065593 19.8868393,26.1364385 L24.30065,20.0005086 C24.6231572,19.55217 25.2480513,19.4501635 25.6963899,19.7726707 C25.7841523,19.8358016 25.8610969,19.9127461 25.9242278,20.0005086 Z" id="三角形" fill="#FFFFFF" transform="translate(25.112480, 23.607910) rotate(-270.000000) translate(-25.112480, -23.607910) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

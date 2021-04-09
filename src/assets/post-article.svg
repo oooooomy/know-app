@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/80*80/活动</title>
+    <defs>
+        <linearGradient x1="0%" y1="3.061617e-15%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFAD8C" offset="0%"></stop>
+            <stop stop-color="#CC2834" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="80" height="80" rx="32"></rect>
+        <linearGradient x1="59.0537495%" y1="53.5375683%" x2="26.2239107%" y2="23.6986305%" id="linearGradient-4">
+            <stop stop-color="#9F2E38" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#66141A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="23.1117999%" y1="7.0980519%" x2="79.3328413%" y2="96.802539%" id="linearGradient-5">
+            <stop stop-color="#85D6FF" offset="0%"></stop>
+            <stop stop-color="#1A57E8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ICON" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="15" transform="translate(-619.000000, -368.000000)">
+            <g id="编组" transform="translate(619.000000, 368.000000)">
+                <g id="路径-14">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="矩形" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="分组" mask="url(#mask-3)">
+                        <g transform="translate(8.000000, 11.000000)">
+                            <polygon id="星形" stroke="none" fill="#FFFFFF" fill-rule="evenodd" transform="translate(7.949747, 4.949747) rotate(-45.000000) translate(-7.949747, -4.949747) " points="7.94974747 6.35485815 5.47487373 7.4246212 6.54463679 4.94974747 5.47487373 2.47487373 7.94974747 3.54463679 10.4246212 2.47487373 9.35485815 4.94974747 10.4246212 7.4246212"></polygon>
+                            <polygon id="星形-copy" stroke="none" fill="#FFFFFF" fill-rule="evenodd" opacity="0.400000006" transform="translate(55.949747, 11.071068) rotate(-45.000000) translate(-55.949747, -11.071068) " points="55.9497475 12.2754484 53.8284271 13.1923882 54.7453669 11.0710678 53.8284271 8.94974747 55.9497475 9.86668723 58.0710678 8.94974747 57.154128 11.0710678 58.0710678 13.1923882"></polygon>
+                            <circle id="椭圆形" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.400000006" cx="1.5" cy="46.5" r="1.5"></circle>
+                        </g>
+                    </g>
+                    <polygon fill="url(#linearGradient-4)" opacity="0.200000003" mask="url(#mask-3)" points="60.3898294 24.4477813 104.480682 70.3569291 70.7447226 112 19.7447226 61"></polygon>
+                </g>
+                <g id="分组-2" transform="translate(18.000000, 15.000000)">
+                    <rect id="矩形-copy-3" fill="#1A57E8" transform="translate(23.985349, 25.167329) rotate(-345.000000) translate(-23.985349, -25.167329) " x="6.98534852" y="3.66732903" width="34" height="43" rx="8"></rect>
+                    <rect id="矩形" fill="url(#linearGradient-5)" transform="translate(19.000000, 25.000000) rotate(-360.000000) translate(-19.000000, -25.000000) " x="0" y="1" width="38" height="48" rx="8"></rect>
+                    <rect id="矩形" fill="#FFFFFF" transform="translate(19.000000, 14.500000) rotate(-360.000000) translate(-19.000000, -14.500000) " x="8" y="13" width="22" height="3" rx="1.5"></rect>
+                    <rect id="矩形-copy-2" fill="#FFFFFF" opacity="0.400000006" transform="translate(14.500000, 25.500000) rotate(-360.000000) translate(-14.500000, -25.500000) " x="8" y="24" width="13" height="3" rx="1.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
