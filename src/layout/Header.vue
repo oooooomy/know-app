@@ -1,14 +1,17 @@
 <template>
   <div>
-    <van-nav-bar :border="false" fixed ref="navbar" @click-right="onClickRight">
+    <van-nav-bar :border="false" fixed ref="navbar" @click-left="onClickLeft" @click-right="onClickRight">
       <template #left>
         <p class="header-logo">知否</p>
       </template>
       <template #title>
-        <van-search
-            shape="round"
-            placeholder="请输入搜索关键词"
-        />
+        <div @click="onSearch">
+          <van-search
+              shape="round"
+              :readonly="true"
+              placeholder="请输入搜索关键词"
+          />
+        </div>
       </template>
       <template #right>
         <img class="add-img" src="../assets/add.svg" alt="">
@@ -23,9 +26,9 @@
               round
               width="40"
               height="40"
-              src="https://img01.yzcdn.cn/vant/cat.jpeg"
+              :src="base + '/file/image/' + user.avatar"
           />
-          <span style="padding-top: 10px;padding-left: 15px">你在 2021-01-22 21:14:21 来到了知否</span>
+          <span style="padding-top: 10px;padding-left: 15px">你在 {{ user.createAt }} 来到了知否</span>
         </div>
 
         <van-row gutter="20">
@@ -53,15 +56,28 @@
 </template>
 
 <script>
+import {BASE_RUL} from "@/utils/request";
+
 export default {
 
   data() {
     return {
+      base: BASE_RUL,
       show: false,
+      user: JSON.parse(localStorage.getItem('user')),
     }
   },
 
   methods: {
+
+    onClickLeft() {
+      this.$router.push('/home')
+    },
+
+    onSearch() {
+      this.$router.push('/search')
+    },
+
     onClickRight() {
       this.show = true
     },

@@ -2,10 +2,10 @@
   <div>
     <div v-for="(item,index) in list" :key="index">
 
-      <div class="item">
-        <router-link :to="'/article/details/' + index ">
+      <div v-if="item.article.hasPoster" class="item">
+        <router-link :to="'/article/details/' + item.article.id ">
           <div class="content">
-            <div class="title">苹果公司知道有人使用Hacintosh吗?苹果公司知道有人使用Hacintosh吗?</div>
+            <div class="title">{{ item.article.title }}</div>
             <div style="display: flex">
               <div>
                 <div class="author">
@@ -13,46 +13,57 @@
                       round
                       width="20"
                       height="20"
-                      src="https://img01.yzcdn.cn/vant/cat.jpeg"
+                      :src="base + '/file/image/' + item.author.avatar"
                   />
-                  <span class="author-name">Soanr</span>
+                  <span class="author-name">{{ item.author.nickname }}</span>
                   <van-icon color="#06f" style="padding-left: 7px;" name="wechat-pay"/>
-                  <span class="author-des">河南科技学院认证</span>
+                  <span class="author-des">{{ item.author.school }}认证</span>
                 </div>
                 <div class="article">
-                  NVIDIA RTX 30系列略显不足的一点就是显存容量普遍很“吝啬”，比如RTX 3070也才只有8GB，在高分辨率的大型3A游戏中有点捉襟见肘，特别是开了光追、高纹理之后。
+                  {{ item.article.content }}
                 </div>
               </div>
-              <img class="poster" alt="" src="https://img01.yzcdn.cn/vant/cat.jpeg"/>
+              <div class="article-poster">
+                <van-image
+                    width="100px"
+                    height="63px"
+                    fit="contain"
+                    :src="base + '/file/image/' + item.article.poster"
+                />
+              </div>
             </div>
             <div class="star-bar">
-              <span class="star-bar-count">22.13万人赞同 · 131条评论</span>
+              <span class="star-bar-count">{{ item.article.agreeCount }}人赞同 · {{ item.article.commentCount }}条评论</span>
               <van-icon color="#909399" style="float: right;padding-top: 3px" name="ellipsis"/>
             </div>
           </div>
         </router-link>
       </div>
 
-      <div class="item">
-        <router-link :to="'/article/details/' + index ">
+      <div v-if="!item.article.hasPoster" class="item">
+        <router-link :to="'/article/details/' + item.article.id ">
           <div class="content">
-            <div class="title">苹果公司知道有人使用Hacintosh吗?苹果公司知道有人使用Hacintosh吗?</div>
-            <div class="author">
-              <van-image
-                  round
-                  width="20"
-                  height="20"
-                  src="https://img01.yzcdn.cn/vant/cat.jpeg"
-              />
-              <span class="author-name">Soanr</span>
-              <van-icon color="#06f" style="padding-left: 7px;" name="wechat-pay"/>
-              <span class="author-des">河南科技学院认证</span>
-            </div>
-            <div class="article">
-              NVIDIA RTX 30系列略显不足的一点就是显存容量普遍很“吝啬”，比如RTX 3070也才只有8GB，在高分辨率的大型3A游戏中有点捉襟见肘，特别是开了光追、高纹理之后。
+            <div class="title">{{ item.article.title }}</div>
+            <div style="display: flex">
+              <div>
+                <div class="author">
+                  <van-image
+                      round
+                      width="20"
+                      height="20"
+                      :src="base + '/file/image/' + item.author.avatar"
+                  />
+                  <span class="author-name">{{ item.author.nickname }}</span>
+                  <van-icon color="#06f" style="padding-left: 7px;" name="wechat-pay"/>
+                  <span class="author-des">{{ item.author.school }}认证</span>
+                </div>
+                <div class="article">
+                  {{ item.article.content }}
+                </div>
+              </div>
             </div>
             <div class="star-bar">
-              <span class="star-bar-count">22.13万人赞同 · 131条评论</span>
+              <span class="star-bar-count">{{ item.article.agreeCount }}人赞同 · {{ item.article.commentCount }}条评论</span>
               <van-icon color="#909399" style="float: right;padding-top: 3px" name="ellipsis"/>
             </div>
           </div>
@@ -64,8 +75,15 @@
 </template>
 
 <script>
+import {BASE_RUL} from "@/utils/request";
+
 export default {
   name: "ArticleList",
+  data() {
+    return {
+      base: BASE_RUL
+    }
+  },
   props: {
     list: {
       type: Array,
@@ -75,12 +93,12 @@ export default {
 </script>
 
 <style scoped>
-.poster {
-  width: 100px;
-  height: 63px;
+.article-poster {
+  min-width: 100px;
+  min-height: 63px;
   border-radius: 5px;
   margin: 15px 0 0 10px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .item {

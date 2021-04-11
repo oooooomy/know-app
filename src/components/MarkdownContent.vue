@@ -13,11 +13,11 @@ export default {
     MarkdownItVue
   },
 
-  data() {
-    return {
-      content: '### your markdown content main `<markdown-it-vue class="md-body" :content="content"/>`'
+  props: {
+    content: {
+      type: String,
     }
-  }
+  },
 
 }
 </script>

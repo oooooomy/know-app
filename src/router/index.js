@@ -40,6 +40,11 @@ const routes = [
         component: () => import('../views/Upload')
     },
     {
+        path: '/search',
+        name: 'Search',
+        component: () => import('../views/Search')
+    },
+    {
         path: '/login',
         name: 'Login',
         component: () => import('../views/Login')
@@ -50,6 +55,12 @@ const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes
+})
+
+//路由卫士
+router.beforeEach((to, from, next) => {
+    if (to.name !== 'Login' && !localStorage.getItem("uid")) next({name: 'Login'})
+    else next()
 })
 
 export default router

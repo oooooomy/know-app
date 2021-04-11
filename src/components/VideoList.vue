@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <div class="item" v-for="(item,index) in 5" :key="index">
-      <div class="title">1983年中国发生了什么？</div>
-      <div class="des">原创｜226万次播放 2020-11-01</div>
+    <div class="item" v-for="(item,index) in videoList" :key="index">
+      <div class="title">{{ item.title }}</div>
+      <div class="des">{{ item.type }}｜发布时间 {{ item.createAt }}</div>
       <div class="play" :style="'height:' + playHeight + 'px'">
         <video class="video"
                :autoplay="false"
@@ -17,10 +17,13 @@
 </template>
 
 <script>
+import {FindAllVideo} from "@/api/video";
+
 export default {
 
   data() {
     return {
+      videoList: [],
       windowWidth: document.documentElement.clientWidth - 30,  //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
       playHeight: 0,
@@ -30,6 +33,12 @@ export default {
 
   mounted() {
     this.playHeight = this.windowWidth * (9 / 16)
+    FindAllVideo().then((res) => {
+      if (res.status) {
+        this.videoList = res.data
+        console.log(res.data)
+      }
+    })
   },
 
 }

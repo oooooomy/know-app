@@ -5,29 +5,26 @@
           round
           width="60"
           height="60"
-          src="https://img01.yzcdn.cn/vant/cat.jpeg"
+          :src="base + '/file/image/' + user.avatar"
       />
       <div class="des">
-        <div class="des-name">Soanr</div>
+        <div class="des-name">{{ user.nickname }}</div>
         <div style="display: flex;padding-top: 7px">
           <van-icon color="#06f" name="wechat-pay"/>
-          <span class="author-des">河南科技学院认证</span>
+          <span class="author-des">{{ user.school }}</span>
         </div>
       </div>
     </div>
     <div class="card">
       <div class="card-title">我的数据</div>
       <van-row style="text-align: center">
-        <van-col span="6" class="card-item">12
+        <van-col span="8" class="card-item">{{user.articleCount}}
           <div class="card-d1">文章</div>
         </van-col>
-        <van-col span="6" class="card-item">8
+        <van-col span="8" class="card-item">{{user.videoCount}}
           <div class="card-d1">视频</div>
         </van-col>
-        <van-col span="6" class="card-item">9
-          <div class="card-d1">收藏</div>
-        </van-col>
-        <van-col span="6" class="card-item">31
+        <van-col span="8" class="card-item">{{user.commentCount}}
           <div class="card-d1">评论</div>
         </van-col>
       </van-row>
@@ -36,7 +33,20 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import {BASE_RUL} from "@/utils/request";
+
+export default {
+
+  data() {
+    return {
+      base: BASE_RUL,
+      user: JSON.parse(localStorage.getItem('user')),
+    }
+  },
+
+}
+</script>
 
 <style scoped>
 .card {

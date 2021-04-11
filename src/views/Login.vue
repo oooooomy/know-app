@@ -10,28 +10,33 @@
     </van-tabs>
     <div class="form" v-if="active === 0">
       <input placeholder="请输入手机" v-model="signInForm.phone" class="input"/>
-      <input placeholder="请输入密码" v-model="signInForm.phone" class="input"/>
+      <input placeholder="请输入密码" type="password" v-model="signInForm.password" class="input"/>
       <van-button @click="submitSignIn" type="info" class="btn">登 录</van-button>
     </div>
     <div class="form" v-if="active === 1">
       <van-uploader v-model="fileList"
-                    multiple
+                    :after-read="onRead"
                     :max-count="1">
         <template #preview-cover="{ file }">
           <div class="preview-cover van-ellipsis">{{ file.name }}</div>
         </template>
       </van-uploader>
       <div style="font-size: 12px;color: #909399;padding-left: 15px;margin-bottom: 10px">上传头像</div>
-      <input placeholder="请输入手机号码" v-model="signInForm.phone" class="input"/>
-      <input placeholder="请输入密码" v-model="signInForm.phone" class="input"/>
-      <input placeholder="请输入昵称" v-model="signInForm.phone" class="input"/>
-      <input placeholder="请输入就读高校" v-model="signInForm.password" type="password" class="input"/>
+      <input placeholder="请输入手机号码" v-model="signUpForm.phone" class="input"/>
+      <input placeholder="请输入密码" v-model="signUpForm.password" type="password" class="input"/>
+      <input placeholder="请输入昵称" v-model="signUpForm.nickname" class="input"/>
+      <input placeholder="请输入就读高校" v-model="signUpForm.school" class="input"/>
       <van-button @click="submitSignUp" type="info" class="btn">注 册</van-button>
     </div>
   </div>
 </template>
 
 <script>
+import {checkSignInForm, checkSignUpForm} from "@/utils/check";
+import {Login, SaveUser} from "@/api/user";
+import axios from "axios";
+import {BASE_RUL} from "@/utils/request";
+
 export default {
   data() {
     return {
@@ -42,18 +47,57 @@ export default {
         password: '',
       },
       signUpForm: {
+        avatar: '',
+        nickname: '',
         phone: '',
         password: '',
+        school: '',
       },
     };
   },
 
   methods: {
-    submitSignIn() {
-      console.log(this.signInForm)
-    },
-    submitSignUp() {
 
+    onRead() {
+      let formData = new FormData()
+      let file = this.fileList[0].file
+      formData.append("file", file, file.name)
+      let config = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        }
+      }
+      axios.post(BASE_RUL + "/file/image", formData, config).then((res) => {
+        if (res.status === 200) this.signUpForm.avatar = res.data
+      })
+    },
+
+    submitSignIn() {
+      if (checkSignInForm(this.signInForm)) {
+        Login(this.signInForm).then((res) => {
+          if (res.status) {
+            localStorage.setItem("user", JSON.stringify(res.data))
+            localStorage.setItem("uid", res.data.id)
+            this.$toast.success("登录成功")
+            this.$router.push("/")
+          }
+        })
+      }
+    },
+
+    submitSignUp() {
+      if (checkSignUpForm(this.signUpForm)) {
+        SaveUser(this.signUpForm).then((res) => {
+          if (res.status) {
+            this.$toast.success("注册成功")
+            setTimeout(() => {
+              this.signUpForm = {}
+              this.fileList = []
+              this.active = 0
+            }, 700)
+          }
+        })
+      }
     },
   },
 

@@ -11,6 +11,7 @@
 
 <script>
 import VideoList from "@/components/VideoList";
+import {FindAllVideo} from "@/api/video";
 
 export default {
 
