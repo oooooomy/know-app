@@ -1,6 +1,8 @@
 # chat-mobile
 
-## 项目预览
+#### Api后端仓库地址 https://github.com/soanr/know-api
+
+### 项目预览
 
 - 首页
 
@@ -14,15 +16,16 @@
 
 ![我的页面-PC预览](https://gaoyuanming-photo.oss-cn-beijing.aliyuncs.com/know/3.png)
 
-## 项目配置
+### 项目配置
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-### 联系QQ: 1729677089
 ### 喜欢的话给个 Star～～～ 😍😍😍
